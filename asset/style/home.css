@@ -1,0 +1,58 @@
+.background--cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  gap: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  }
+}
+
+.square {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.square::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.square .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.col-span--2 {
+  grid-column: span 2;
+}
+
+.row-span--2 {
+  grid-row: span 2;
+}
+
+.mh--400 {
+  min-height: 400px;
+}
+
+.tag {
+  transition: all 0.2s;
+}
+
+.tag:hover {
+  background-color: rgb(120, 150, 41);
+  color: white;
+  cursor: pointer;
+}
