@@ -1,9 +1,3 @@
-.background--cover {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
