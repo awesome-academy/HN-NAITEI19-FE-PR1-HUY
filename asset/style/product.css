@@ -1,0 +1,38 @@
+.list-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.list-pagination__item:hover {
+  cursor: pointer;
+  color: black !important;
+}
+
+.list-pagination > .active {
+  color: black !important;
+}
+
+.list--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  gap: 10px;
+}
+
+.background--cover {
+  width: 100%;
+  height: 250px;
+}
+
+@media screen and (max-width: 992px) {
+  .list--grid {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .list--grid {
+    grid-template-columns: repeat(auto-fill, minmax(90%, 1fr));
+  }
+}
