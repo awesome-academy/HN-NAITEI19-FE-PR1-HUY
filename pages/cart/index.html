@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../asset/style/reset.css" />
+    <link rel="stylesheet" href="../../asset/style/shared.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-xl bg-light navbar-light py-2 border-bottom border-2 sticky-top"
+    >
+      <div class="container justify-content-between">
+        <a href="#" class="navbar-brand"
+          ><img
+            src="../../asset/image/logo.png"
+            alt="logo"
+            class="w-75 w-sm-100"
+        /></a>
+
+        <div
+          id="my-nav"
+          class="collapse navbar-collapse justify-content-center"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder menu__link"
+                  >Trang chủ</span
+                ></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Giới thiệu</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">
+                  Sản phẩm <i class="fas fa-chevron-down px-1"></i></span
+              ></a>
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Tin tức</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Bản đồ</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Liên hệ</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="row align-items-center gap-2 gap-sm-4">
+          <div class="col">
+            <a href="../cart/index.html" class="text-dark"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+          </div>
+          <div class="col"><i class="fas fa-search"></i></div>
+          <button
+            class="navbar-toggler col"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#my-nav"
+            aria-controls="my-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mb-4">
+      <section class="py-3 border-bottom border-2">
+        <ol
+          class="breadcrumb fw-bold align-middle m-0"
+          style="--bs-breadcrumb-divider: '>'"
+        >
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item text--green">Giỏ hàng</li>
+        </ol>
+      </section>
+    </div>
+
+    <main>
+      <div class="container">
+        <h1 class="text-uppercase">Giỏ hàng</h1>
+        <div id="cart" class="d-flex flex-column align-items-center">
+          <form class="w-100">
+            <div class="table-responsive text-nowrap">
+              <table class="table text-center">
+                <thead>
+                  <tr class="fw-bold text-uppercase">
+                    <th scope="col">Ảnh</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Tổng số</th>
+                    <th scope="col">Xóa</th>
+                  </tr>
+                </thead>
+                <tbody id="data"></tbody>
+              </table>
+            </div>
+          </form>
+        </div>
+        <div class="w-100 d-flex flex-row gap-3 justify-content-end">
+          <a
+            href="../../pages/product/index.html"
+            class="btn text-white bg-dark rounded-none"
+            >Tiếp tục mua hàng</a
+          >
+          <button
+            class="rounded bg-dark text-white px-3"
+            onclick="deleteCart()"
+          >
+            Xóa
+          </button>
+          <button
+            class="rounded bg-success text-white px-3"
+            onclick="updateCart()"
+          >
+            Cập nhật
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer bg-dark pt-5 text-secondary mt-5">
+      <div class="border-bottom border-1 border-secondary">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4">
+              <h5 class="text-uppercase text-white mb-4">
+                liên hệ với chúng tôi
+              </h5>
+              <div class="d-flex gap-2">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>
+                  Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q.Ba
+                  Đình, Hà Nội
+                </p>
+              </div>
+
+              <div class="d-flex gap-2">
+                <i class="fas fa-phone"></i>
+                <p>(04) 6674 2332 -</p>
+                <i class="fad fa-phone-rotary"></i>
+                <p>(04) 3786 8904</p>
+              </div>
+
+              <div class="d-flex gap-2">
+                <i class="fas fa-phone"></i>
+                <p>(08) 6680 9686</p>
+                <i class="fas fa-envelope"></i>
+                <span class="fst-italic">Support@bizweb.vn</span>
+              </div>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Chuyển hàng</h5>
+              <p>Mua sắm trực tuyến</p>
+              <p>Đến từ chúng tôi gửi đến</p>
+              <p>Chính sách vận chuyển</p>
+              <p>Vận chuyển thông tin</p>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Hỗ trợ</h5>
+              <p>Câu chuyện của chúng ta</p>
+              <p>Thanh toán an toàn</p>
+              <p>Tùy chọn vận chuyển</p>
+              <p>Chính sách vận chuyển</p>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Thông tin</h5>
+              <p>Về chúng tôi</p>
+              <p>Điều khoản & điều kiện</p>
+              <p>Chính sách riêng tư</p>
+              <p>Đơn dặt hàng và Returns</p>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">My account</h5>
+              <p>Sản phẩm yêu thích</p>
+              <p>Tài khoản</p>
+              <p>Đăng ký</p>
+              <p>Đăng nhập</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid py-2">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <small> @ Copyright 2008-2014 DKT Technology JSC </small>
+          <div>
+            <img
+              src="../../asset/image/mastercard.png"
+              alt="mastercard"
+              height="50"
+            />
+            <img src="../../asset/image/paypal.svg" alt="paypal" height="50" />
+            <img src="../../asset/image/visa.png" alt="visa" height="50" />
+            <img
+              src="../../asset/image/maestro.svg"
+              alt="maestro"
+              height="50"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <i class="fas fa-check-square text--green me-3"></i>
+          <strong class="me-auto">Cập nhật thành công</strong>
+          <small>Vừa xong</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Giỏ hàng đã được cập nhật thành công</div>
+      </div>
+    </div>
+  </body>
+</html>
