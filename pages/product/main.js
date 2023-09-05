@@ -65,10 +65,12 @@ getProduct().then((result) => {
     const itemGrid = domParser.parseFromString(
       `
       <div class="bg-white rounded text-center p-2">
-        <div
-          class="background--cover"
-          style="background-image: url(${element.img})"
-        ></div>
+        <a href="/pages/detail/index.html?id=${element.id}">
+          <div
+            class="background--cover"
+            style="background-image: url(${element.img})"
+          ></div>
+        </a>
         <hr />
         <p class="mt-3 mb-1 text-secondary fw-bold">HOME</p>
         <h5>${element.title}</h5>
@@ -110,11 +112,13 @@ getProduct().then((result) => {
       `
       <div class="row align-items-center">
         <div class="col-12 col-sm-4 col-lg-3 text-center">
-          <img
-            src="${element.img}"
-            alt="nuoc-hoa"
-            class="img-fluid"
-          />
+          <a href="/pages/detail/index.html?id=${element.id}">
+            <img
+              src="${element.img}"
+              alt="nuoc-hoa"
+              class="img-fluid"
+            />
+          </a>
         </div>
         <div class="col-12 col-sm-8 col-lg-9">
           <h4>${element.title}</h4>

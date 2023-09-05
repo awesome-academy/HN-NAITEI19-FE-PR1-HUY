@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../asset/style/reset.css" />
+    <link rel="stylesheet" href="../../asset/style/shared.css" />
+    <link rel="stylesheet" href="../../asset/style/detail.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-xl bg-light navbar-light py-2 border-bottom border-2 sticky-top"
+    >
+      <div class="container justify-content-between">
+        <a href="../home/index.html" class="navbar-brand"
+          ><img
+            src="../../asset/image/logo.png"
+            alt="logo"
+            class="w-75 w-sm-100"
+        /></a>
+
+        <div
+          id="my-nav"
+          class="collapse navbar-collapse justify-content-center"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder menu__link"
+                  >Trang chủ</span
+                ></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../about/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Giới thiệu</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../product/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">
+                  Sản phẩm <i class="fas fa-chevron-down px-1"></i></span
+              ></a>
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Tin tức</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Bản đồ</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Liên hệ</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="row align-items-center gap-2 gap-sm-4">
+          <div class="col">
+            <a href="../cart/index.html" class="text-dark"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+          </div>
+          <div class="col"><i class="fas fa-search"></i></div>
+          <button
+            class="navbar-toggler col"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#my-nav"
+            aria-controls="my-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section class="py-3 border-bottom border-2">
+        <ol
+          class="breadcrumb fw-bold align-middle m-0"
+          style="--bs-breadcrumb-divider: '>'"
+        >
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">Sản phẩm</li>
+          <li class="breadcrumb-item text--green">Trang sức</li>
+          <li class="breadcrumb-item text--green">Lắc tay</li>
+        </ol>
+      </section>
+    </div>
+
+    <main class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-2 col-lg-1 d-flex flex-column gap-3 justify-content-center align-items-center"
+          >
+            <div style="width: 40px">
+              <img
+                onclick="changeImage(this)"
+                src="../../asset/image/slide1.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div style="width: 40px">
+              <img
+                onclick="changeImage(this)"
+                src="../../asset/image/slide2.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div style="width: 40px">
+              <img
+                onclick="changeImage(this)"
+                src="../../asset/image/slide3.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div style="width: 40px">
+              <img
+                onclick="changeImage(this)"
+                src="../../asset/image/slide1.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div
+            class="col-10 col-lg-5 d-flex justify-content-center align-items-center border border-2"
+          >
+            <img
+              id="main-image"
+              src="../../asset/image/slide2.png"
+              alt="main-image"
+              class="img-fluid"
+            />
+          </div>
+
+          <div class="col-12 col-lg-6 text-secondary my-3">
+            <h4 id="prod-title" class="text-uppercase">
+              Lắc tay Tyffhany xu hướng mới nhất
+            </h4>
+            <small class="text-uppercase">Tyffhany ms 3021</small>
+            <p class="mt-3">
+              <span
+                id="prod-price"
+                class="h2 text-black fw-bold fst-italic me-2"
+                >950.000đ</span
+              >
+              <span class="h5 fst-italic">990.000 VND</span>
+            </p>
+            <p id="prod-desc">
+              Không thể phủ nhận, thời trang và phong cách chính là "tuyên ngôn"
+              không lời mạnh mẽ nhất của mỗi người phụ nữ. Do đó, việc mua sắm
+              thời trang trở thành niềm vui, và có khi là nguồn cảm hứng vô tận
+              để phái đẹp sống vui. Sống đẹp hơn trong mắt nửa còn lại của thế
+              giới. Để F5 lại tủ đồ của mình trước những xu hướng ngày một đa
+              dạng hơn trong thế giới trang, nhiều chị em không ngần ngại chi
+              tiêu "mạnh tay" để sở hữu những món đồ yêu thích
+            </p>
+            <p class="text-black fw-bold text-uppercase mb-1">Màu sắc</p>
+            <select class="form-select mb-3" aria-label="select color">
+              <option value="1">Màu bạc</option>
+              <option value="2">Màu hồng</option>
+              <option value="3">Màu trắng</option>
+            </select>
+
+            <p class="text-black fw-bold text-uppercase mb-1">Size</p>
+            <select class="form-select mb-3" aria-label="select size">
+              <option value="1">12</option>
+              <option value="2">13</option>
+              <option value="3">14</option>
+            </select>
+
+            <div class="d-flex justify-content-start align-items-center gap-3">
+              <button
+                class="btn px-3 btn-outline-success fw-bold"
+                onclick="addToCart()"
+              >
+                Mua hàng
+              </button>
+              <button class="btn btn-success">
+                <i class="fas fa-heart"></i>
+              </button>
+              <button class="btn btn-outline-dark">
+                <i class="fas fa-sync-alt"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="w-100 mt-5">
+            <div class="row">
+              <div class="col-12 col-lg-8">
+                <div
+                  class="d-flex flex-row align-items-center gap-3 overflow-auto"
+                >
+                  <span
+                    class="h5 fw-bold text-nowrap text-black text-uppercase m-0"
+                    >Đặc điểm nổi bật</span
+                  >
+                  <span
+                    class="h5 fw-bold text-nowrap text-secondary text-uppercase m-0"
+                    >Thông tin sản phẩm</span
+                  >
+                  <span
+                    class="h5 fw-bold text-nowrap text-secondary text-uppercase m-0"
+                    >Đánh giá</span
+                  >
+                </div>
+                <hr />
+                <div
+                  class="d-sm-flex flex-row-reverse justify-content-between align-items-center gap-3"
+                >
+                  <div class="my-4">
+                    <img
+                      src="../../asset/image/lac-tay-1.png"
+                      alt="lac-tay-1"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="w-100 w-sm-75">
+                    <h5 class="text-uppercase">The mark of a legend</h5>
+                    <hr class="w-25" />
+                    <p class="text-secondary">
+                      Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ
+                      sưu tập mang tính biểu tượng này cung cấp cho một cái gật
+                      đầu với qua trong khi thể hiện một cảm giác hiện đại với
+                      kiểu dáng đẹp đường cong và đường nét mượt mà.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="d-sm-flex flex-row justify-content-between align-items-center gap-3 my-4"
+                >
+                  <div class="d-flex d-sm-block justify-content-end">
+                    <img
+                      src="../../asset/image/lac-tay-2.png"
+                      alt="lac-tay-2"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="my-3 w-100 w-sm-75 text-end">
+                    <div class="d-flex flex-column align-items-end">
+                      <h5 class="text-uppercase">The mark of a legend</h5>
+                      <hr class="w-25" />
+                    </div>
+                    <p class="text-secondary">
+                      Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ
+                      sưu tập mang tính biểu tượng này cung cấp cho một cái gật
+                      đầu với qua trong khi thể hiện một cảm giác hiện đại với
+                      kiểu dáng đẹp đường cong và đường nét mượt mà.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="d-sm-flex flex-row-reverse justify-content-between align-items-center gap-3 my-4"
+                >
+                  <div>
+                    <img
+                      src="../../asset/image/lac-tay-3.png"
+                      alt="lac-tay-3"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="my-3 w-100 w-sm-75">
+                    <h5 class="text-uppercase">The mark of a legend</h5>
+                    <hr class="w-25" />
+                    <p class="text-secondary">
+                      Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ
+                      sưu tập mang tính biểu tượng này cung cấp cho một cái gật
+                      đầu với qua trong khi thể hiện một cảm giác hiện đại với
+                      kiểu dáng đẹp đường cong và đường nét mượt mà.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="d-sm-flex flex-row justify-content-between align-items-center gap-3 my-4"
+                >
+                  <div class="d-flex d-sm-block justify-content-end">
+                    <img
+                      src="../../asset/image/lac-tay-4.png"
+                      alt="lac-tay-4"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="my-3 w-100 w-sm-75 text-end">
+                    <div class="d-flex flex-column align-items-end">
+                      <h5 class="text-uppercase">The mark of a legend</h5>
+                      <hr class="w-25" />
+                    </div>
+                    <p class="text-secondary">
+                      Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ
+                      sưu tập mang tính biểu tượng này cung cấp cho một cái gật
+                      đầu với qua trong khi thể hiện một cảm giác hiện đại với
+                      kiểu dáng đẹp đường cong và đường nét mượt mà.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-none d-lg-block col-4">
+                <div class="mb-3">
+                  <span class="h5 fw-bold text-nowrap text-black text-uppercase"
+                    >sản phẩm bán chạy</span
+                  >
+                  <hr />
+                  <div class="d-flex flex-row gap-2 align-items-center">
+                    <img
+                      src="../../asset/image/most-sale.png"
+                      alt="most-sale"
+                      class="img-fluid"
+                    />
+                    <div>
+                      <p class="mb-1 fw-semibold">Mỹ phẩm châu Âu</p>
+                      <p>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span class="ms-2 text-secondary">(4 lượt mua)</span>
+                      </p>
+                      <h4 class="fst-italic fw-bold">350.000đ</h4>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="d-flex flex-row gap-2 align-items-center">
+                    <img
+                      src="../../asset/image/most-sale.png"
+                      alt="most-sale"
+                      class="img-fluid"
+                    />
+                    <div>
+                      <p class="mb-1 fw-semibold">Mỹ phẩm châu Âu</p>
+                      <p>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span class="ms-2 text-secondary">(4 lượt mua)</span>
+                      </p>
+                      <h4 class="fst-italic fw-bold">350.000đ</h4>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="d-flex flex-row gap-2 align-items-center">
+                    <img
+                      src="../../asset/image/most-sale.png"
+                      alt="most-sale"
+                      class="img-fluid"
+                    />
+                    <div>
+                      <p class="mb-1 fw-semibold">Mỹ phẩm châu Âu</p>
+                      <p>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span class="ms-2 text-secondary">(4 lượt mua)</span>
+                      </p>
+                      <h4 class="fst-italic fw-bold">350.000đ</h4>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span class="h5 fw-bold text-black text-uppercase m-0"
+                    >sản phẩm mua nhiều</span
+                  >
+                  <hr />
+                  <div class="d-flex flex-row gap-2 align-items-center">
+                    <img
+                      src="../../asset/image/most-sale.png"
+                      alt="most-sale"
+                      class="img-fluid"
+                    />
+                    <div>
+                      <p class="mb-1 fw-semibold">Mỹ phẩm châu Âu</p>
+                      <p>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span class="ms-2 text-secondary">(4 lượt mua)</span>
+                      </p>
+                      <h4 class="fst-italic fw-bold">350.000đ</h4>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="d-flex flex-row gap-2 align-items-center">
+                    <img
+                      src="../../asset/image/most-sale.png"
+                      alt="most-sale"
+                      class="img-fluid"
+                    />
+                    <div>
+                      <p class="mb-1 fw-semibold">Mỹ phẩm châu Âu</p>
+                      <p>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span class="ms-2 text-secondary">(4 lượt mua)</span>
+                      </p>
+                      <h4 class="fst-italic fw-bold">350.000đ</h4>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="d-flex flex-row gap-2 align-items-center">
+                    <img
+                      src="../../asset/image/most-sale.png"
+                      alt="most-sale"
+                      class="img-fluid"
+                    />
+                    <div>
+                      <p class="mb-1 fw-semibold">Mỹ phẩm châu Âu</p>
+                      <p>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span class="ms-2 text-secondary">(4 lượt mua)</span>
+                      </p>
+                      <h4 class="fst-italic fw-bold">350.000đ</h4>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="d-flex flex-row gap-2 align-items-center">
+                    <img
+                      src="../../asset/image/most-sale.png"
+                      alt="most-sale"
+                      class="img-fluid"
+                    />
+                    <div>
+                      <p class="mb-1 fw-semibold">Mỹ phẩm châu Âu</p>
+                      <p>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span class="ms-2 text-secondary">(4 lượt mua)</span>
+                      </p>
+                      <h4 class="fst-italic fw-bold">350.000đ</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toast -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <i class="fas fa-check-square text--green me-2 fs-5"></i>
+            <strong class="me-auto fs-5">Thêm thành công</strong>
+            <small>Vừa xong</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">Đơn hàng của bạn đã được thêm thành công</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer bg-dark pt-5 text-secondary mt-5">
+      <div class="border-bottom border-1 border-secondary">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4">
+              <h5 class="text-uppercase text-white mb-4">
+                liên hệ với chúng tôi
+              </h5>
+              <div class="d-flex gap-2">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>
+                  Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q.Ba
+                  Đình, Hà Nội
+                </p>
+              </div>
+
+              <div class="d-flex gap-2">
+                <i class="fas fa-phone"></i>
+                <p>(04) 6674 2332 -</p>
+                <i class="fad fa-phone-rotary"></i>
+                <p>(04) 3786 8904</p>
+              </div>
+
+              <div class="d-flex gap-2">
+                <i class="fas fa-phone"></i>
+                <p>(08) 6680 9686</p>
+                <i class="fas fa-envelope"></i>
+                <span class="fst-italic">Support@bizweb.vn</span>
+              </div>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Chuyển hàng</h5>
+              <p>Mua sắm trực tuyến</p>
+              <p>Đến từ chúng tôi gửi đến</p>
+              <p>Chính sách vận chuyển</p>
+              <p>Vận chuyển thông tin</p>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Hỗ trợ</h5>
+              <p>Câu chuyện của chúng ta</p>
+              <p>Thanh toán an toàn</p>
+              <p>Tùy chọn vận chuyển</p>
+              <p>Chính sách vận chuyển</p>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Thông tin</h5>
+              <p>Về chúng tôi</p>
+              <p>Điều khoản & điều kiện</p>
+              <p>Chính sách riêng tư</p>
+              <p>Đơn dặt hàng và Returns</p>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">My account</h5>
+              <p>Sản phẩm yêu thích</p>
+              <p>Tài khoản</p>
+              <p>Đăng ký</p>
+              <p>Đăng nhập</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid py-2">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <small> @ Copyright 2008-2014 DKT Technology JSC </small>
+          <div>
+            <img
+              src="../../asset/image/mastercard.png"
+              alt="mastercard"
+              height="50"
+            />
+            <img src="../../asset/image/paypal.svg" alt="paypal" height="50" />
+            <img src="../../asset/image/visa.png" alt="visa" height="50" />
+            <img
+              src="../../asset/image/maestro.svg"
+              alt="maestro"
+              height="50"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js" type="text/javascript"></script>
+  </body>
+</html>
