@@ -336,9 +336,13 @@
           <!-- grid -->
           <div class="col-12 col-md-9">
             <div class="d-flex justify-content-between align-items-center">
-              <div class="d-flex flex-row gap-2">
-                <div><i class="fas fa-th-large"></i></div>
-                <div class="text-secondary"><i class="fas fa-list"></i></div>
+              <div class="d-flex flex-row gap-2 text-secondary display-option">
+                <div class="display--grid active">
+                  <i class="fas fa-th-large"></i>
+                </div>
+                <div class="display--list">
+                  <i class="fas fa-list"></i>
+                </div>
               </div>
               <ul class="list-pagination m-0 p-0">
                 <li>
@@ -361,7 +365,8 @@
               </ul>
             </div>
             <hr />
-            <div class="list--grid">
+
+            <div id="display--grid" class="list--grid">
               <div class="bg-white rounded text-center p-2">
                 <div
                   class="background--cover"
@@ -545,9 +550,140 @@
                 </div>
               </div>
             </div>
+
+            <div id="display--list" class="d-flex flex-column gap-4">
+              <div class="row align-items-center">
+                <div class="col-12 col-sm-4 col-lg-3 text-center">
+                  <img
+                    src="../../asset/image/slide1.png"
+                    alt="nuoc-hoa"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="col-12 col-sm-8 col-lg-9">
+                  <h4>Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới</h4>
+                  <p>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <span class="ms-2 text-secondary">(4 lượt mua)</span>
+                  </p>
+                  <p class="text-secondary">
+                    Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu
+                    tập mang tính biểu tượng này cung cấp cho một cái gật đầu
+                    với qua trong khi thể hiện một cảm giác hiện đại với kiểu
+                    dáng đẹp đường cong và đường nét mượt mà.
+                  </p>
+                  <p class="h3 fw-bolder fst-italic">355.000đ</p>
+                  <div class="d-flex align-items-center gap-3">
+                    <button class="btn px-1 btn-outline-success fw-bold">
+                      Mua hàng
+                    </button>
+                    <button class="btn btn-success">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="btn btn-outline-dark">
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
+    <!-- footer -->
+    <footer class="footer bg-dark pt-5 text-secondary mt-5">
+      <div class="border-bottom border-1 border-secondary">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4">
+              <h5 class="text-uppercase text-white mb-4">
+                liên hệ với chúng tôi
+              </h5>
+              <div class="d-flex gap-2">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>
+                  Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q.Ba
+                  Đình, Hà Nội
+                </p>
+              </div>
+
+              <div class="d-flex gap-2">
+                <i class="fas fa-phone"></i>
+                <p>(04) 6674 2332 -</p>
+                <i class="fad fa-phone-rotary"></i>
+                <p>(04) 3786 8904</p>
+              </div>
+
+              <div class="d-flex gap-2">
+                <i class="fas fa-phone"></i>
+                <p>(08) 6680 9686</p>
+                <i class="fas fa-envelope"></i>
+                <span class="fst-italic">Support@bizweb.vn</span>
+              </div>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Chuyển hàng</h5>
+              <p>Mua sắm trực tuyến</p>
+              <p>Đến từ chúng tôi gửi đến</p>
+              <p>Chính sách vận chuyển</p>
+              <p>Vận chuyển thông tin</p>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Hỗ trợ</h5>
+              <p>Câu chuyện của chúng ta</p>
+              <p>Thanh toán an toàn</p>
+              <p>Tùy chọn vận chuyển</p>
+              <p>Chính sách vận chuyển</p>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Thông tin</h5>
+              <p>Về chúng tôi</p>
+              <p>Điều khoản & điều kiện</p>
+              <p>Chính sách riêng tư</p>
+              <p>Đơn dặt hàng và Returns</p>
+            </div>
+
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">My account</h5>
+              <p>Sản phẩm yêu thích</p>
+              <p>Tài khoản</p>
+              <p>Đăng ký</p>
+              <p>Đăng nhập</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid py-2">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <small> @ Copyright 2008-2014 DKT Technology JSC </small>
+          <div>
+            <img
+              src="../../asset/image/mastercard.png"
+              alt="mastercard"
+              height="50"
+            />
+            <img src="../../asset/image/paypal.svg" alt="paypal" height="50" />
+            <img src="../../asset/image/visa.png" alt="visa" height="50" />
+            <img
+              src="../../asset/image/maestro.svg"
+              alt="maestro"
+              height="50"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js" type="text/javascript"></script>
   </body>
 </html>
