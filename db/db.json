@@ -1,0 +1,46 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide1.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 2,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide1.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 3,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide1.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 4,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide1.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 5,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide1.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 6,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide1.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    }
+  ]
+}
