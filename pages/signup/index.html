@@ -26,47 +26,82 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../../asset/style/reset.css" />
+    <link rel="stylesheet" href="../../asset/style/shared.css" />
   </head>
   <body>
-    <header class="py-2 border-bottom border-2 sticky-top bg-white">
-      <nav
-        class="container d-flex flex-row justify-content-between align-items-center"
-      >
-        <a href="../home/index.html">
-          <img src="../../asset/image/logo.png" alt="mandala-logo" />
-        </a>
+    <nav
+      class="navbar navbar-expand-xl bg-light navbar-light py-2 border-bottom border-2 sticky-top"
+    >
+      <div class="container justify-content-between">
+        <a href="../home/index.html" class="navbar-brand"
+          ><img
+            src="../../asset/image/logo.png"
+            alt="logo"
+            class="w-75 w-sm-100"
+        /></a>
 
-        <div class="d-flex flex-row align-items-center gap-5">
-          <a href="../home/index.html" class="text-dark"
-            ><span class="text-uppercase fw-bolder menu__link"
-              >Trang chủ</span
-            ></a
-          >
-          <a href="../home/index.html" class="text-dark"
-            ><span class="text-uppercase fw-bolder">Giới thiệu</span></a
-          >
-          <a href="../home/index.html" class="text-dark">
-            <span class="text-uppercase fw-bolder">
-              Sản phẩm <i class="fas fa-chevron-down px-1"></i
-            ></span>
-          </a>
-          <a href="../home/index.html" class="text-dark"
-            ><span class="text-uppercase fw-bolder">Tin tức</span></a
-          >
-          <a href="../home/index.html" class="text-dark"
-            ><span class="text-uppercase fw-bolder">Bản đồ</span></a
-          >
-          <a href="../home/index.html" class="text-dark"
-            ><span class="text-uppercase fw-bolder">Liên hệ</span></a
-          >
+        <div
+          id="my-nav"
+          class="collapse navbar-collapse justify-content-center"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder menu__link"
+                  >Trang chủ</span
+                ></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../about/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Giới thiệu</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../product/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">
+                  Sản phẩm <i class="fas fa-chevron-down px-1"></i></span
+              ></a>
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Tin tức</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Bản đồ</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a href="../home/index.html" class="nav-link text-dark"
+                ><span class="text-uppercase fw-bolder">Liên hệ</span></a
+              >
+            </li>
+          </ul>
         </div>
 
-        <div class="d-flex flex-row gap-5">
-          <i class="fas fa-shopping-cart"></i>
-          <i class="fas fa-search"></i>
+        <div class="row align-items-center gap-2 gap-sm-4">
+          <div class="col">
+            <a href="../cart/index.html" class="text-dark"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+          </div>
+          <div class="col"><i class="fas fa-search"></i></div>
+          <button
+            class="navbar-toggler col"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#my-nav"
+            aria-controls="my-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
     <div class="container">
       <section class="py-3 border-bottom border-2">
@@ -141,81 +176,93 @@
 
     <footer class="footer bg-dark pt-5 text-secondary mt-5">
       <div class="border-bottom border-1 border-secondary">
-        <div class="container d-flex flex-row gap-5">
-          <div class="w-25">
-            <h5 class="text-uppercase text-white mb-4">
-              liên hệ với chúng tôi
-            </h5>
-            <div class="d-flex gap-2">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>
-                Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q.Ba
-                Đình, Hà Nội
-              </p>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4">
+              <h5 class="text-uppercase text-white mb-4">
+                liên hệ với chúng tôi
+              </h5>
+              <div class="d-flex gap-2">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>
+                  Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q.Ba
+                  Đình, Hà Nội
+                </p>
+              </div>
+
+              <div class="d-flex gap-2">
+                <i class="fas fa-phone"></i>
+                <p>(04) 6674 2332 -</p>
+                <i class="fad fa-phone-rotary"></i>
+                <p>(04) 3786 8904</p>
+              </div>
+
+              <div class="d-flex gap-2">
+                <i class="fas fa-phone"></i>
+                <p>(08) 6680 9686</p>
+                <i class="fas fa-envelope"></i>
+                <span class="fst-italic">Support@bizweb.vn</span>
+              </div>
             </div>
 
-            <div class="d-flex gap-2">
-              <i class="fas fa-phone"></i>
-              <p>(04) 6674 2332 -</p>
-              <i class="fad fa-phone-rotary"></i>
-              <p>(04) 3786 8904</p>
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Chuyển hàng</h5>
+              <p>Mua sắm trực tuyến</p>
+              <p>Đến từ chúng tôi gửi đến</p>
+              <p>Chính sách vận chuyển</p>
+              <p>Vận chuyển thông tin</p>
             </div>
 
-            <div class="d-flex gap-2">
-              <i class="fas fa-phone"></i>
-              <p>(08) 6680 9686</p>
-              <i class="fas fa-envelope"></i>
-              <span class="fst-italic">Support@bizweb.vn</span>
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Hỗ trợ</h5>
+              <p>Câu chuyện của chúng ta</p>
+              <p>Thanh toán an toàn</p>
+              <p>Tùy chọn vận chuyển</p>
+              <p>Chính sách vận chuyển</p>
             </div>
-          </div>
 
-          <div class="flex-grow-1">
-            <h5 class="text-uppercase text-white mb-4">Chuyển hàng</h5>
-            <p>Mua sắm trực tuyến</p>
-            <p>Đến từ chúng tôi gửi đến</p>
-            <p>Chính sách vận chuyển</p>
-            <p>Vận chuyển thông tin</p>
-          </div>
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">Thông tin</h5>
+              <a href="../about/index.html">
+                <p>Về chúng tôi</p>
+              </a>
+              <p>Điều khoản & điều kiện</p>
+              <p>Chính sách riêng tư</p>
+              <p>Đơn dặt hàng và Returns</p>
+            </div>
 
-          <div class="flex-grow-1">
-            <h5 class="text-uppercase text-white mb-4">Hỗ trợ</h5>
-            <p>Câu chuyện của chúng ta</p>
-            <p>Thanh toán an toàn</p>
-            <p>Tùy chọn vận chuyển</p>
-            <p>Chính sách vận chuyển</p>
-          </div>
-
-          <div class="flex-grow-1">
-            <h5 class="text-uppercase text-white mb-4">Thông tin</h5>
-            <p>Về chúng tôi</p>
-            <p>Điều khoản & điều kiện</p>
-            <p>Chính sách riêng tư</p>
-            <p>Đơn dặt hàng và Returns</p>
-          </div>
-
-          <div class="flex-grow-1">
-            <h5 class="text-uppercase text-white mb-4">My account</h5>
-            <p>Sản phẩm yêu thích</p>
-            <p>Tài khoản</p>
-            <p>Đăng ký</p>
-            <p>Đăng nhập</p>
+            <div class="col-xl">
+              <h5 class="text-uppercase text-white mb-4">My account</h5>
+              <p>Sản phẩm yêu thích</p>
+              <p>Tài khoản</p>
+              <a href="../signup/index.html">
+                <p>Đăng ký</p>
+              </a>
+              <a href="../login/index.html">
+                <p>Đăng nhập</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div
-        class="d-flex flex-row justify-content-between align-items-center py-3 container"
-      >
-        <small> @ Copyright 2008-2014 DKT Technology JSC </small>
-        <div class="d-flex flex-row gap-3">
-          <img
-            src="../../asset/image/mastercard.png"
-            alt="mastercard"
-            height="50"
-          />
-          <img src="../../asset/image/paypal.svg" alt="paypal" height="50" />
-          <img src="../../asset/image/visa.png" alt="visa" height="50" />
-          <img src="../../asset/image/maestro.svg" alt="maestro" height="50" />
+      <div class="container-fluid py-2">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <small> @ Copyright 2008-2014 DKT Technology JSC </small>
+          <div>
+            <img
+              src="../../asset/image/mastercard.png"
+              alt="mastercard"
+              height="50"
+            />
+            <img src="../../asset/image/paypal.svg" alt="paypal" height="50" />
+            <img src="../../asset/image/visa.png" alt="visa" height="50" />
+            <img
+              src="../../asset/image/maestro.svg"
+              alt="maestro"
+              height="50"
+            />
+          </div>
         </div>
       </div>
     </footer>
