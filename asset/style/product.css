@@ -26,8 +26,13 @@
   background-size: contain;
 }
 
+.page--active {
+  color: white;
+  background-color: rgb(120, 150, 41);
+}
+
 .active {
-  color: black;
+  color: rgb(120, 150, 41);
 }
 
 .display-option > div:hover {

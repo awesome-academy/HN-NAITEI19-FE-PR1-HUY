@@ -2,6 +2,7 @@ const displayGridBtn = document.getElementsByClassName('display--grid')[0];
 const displayListBtn = document.getElementsByClassName('display--list')[0];
 const displayGrid = document.getElementById('display--grid');
 const displayList = document.getElementById('display--list');
+let currentPage = 1;
 
 async function getProduct() {
   const res = await fetch('http://localhost:3000/api/product');
@@ -34,11 +35,15 @@ if (localStorage.getItem('display') === 'list') {
 }
 
 displayGridBtn.addEventListener('click', () => {
+  currentPage = 1;
   displayGridSelect();
+  renderPagination();
 });
 
 displayListBtn.addEventListener('click', () => {
+  currentPage = 1;
   displayListSelect();
+  renderPagination();
 });
 
 const products = [];
@@ -58,10 +63,10 @@ function addToCart(itemId) {
   toastBootstrap.show();
 }
 
-getProduct().then((result) => {
+function renderGrid(list, page) {
   const domParser = new DOMParser();
-  result.forEach((element) => {
-    products.push(element);
+  displayGrid.innerHTML = '';
+  list.slice((page - 1) * 6, page * 6).forEach((element) => {
     const itemGrid = domParser.parseFromString(
       `
       <div class="bg-white rounded text-center p-2">
@@ -108,6 +113,14 @@ getProduct().then((result) => {
       'text/html'
     );
 
+    displayGrid.appendChild(itemGrid.body.firstChild);
+  });
+}
+
+function renderList(list, page) {
+  const domParser = new DOMParser();
+  displayList.innerHTML = '';
+  list.slice((page - 1) * 3, page * 3).forEach((element) => {
     const itemList = domParser.parseFromString(
       `
       <div class="row align-items-center">
@@ -161,7 +174,62 @@ getProduct().then((result) => {
       'text/html'
     );
 
-    displayGrid.appendChild(itemGrid.body.firstChild);
     displayList.appendChild(itemList.body.firstChild);
   });
+}
+
+getProduct().then((result) => {
+  products.push(...result);
+  renderGrid(products, currentPage);
+  renderList(products, currentPage);
+  renderPagination();
 });
+
+function updatePage(page) {
+  document
+    .getElementById(`page-${currentPage}`)
+    .classList.remove('page--active');
+
+  if (page < 1) currentPage = 1;
+  else currentPage = page;
+
+  if (localStorage.getItem('display') === 'grid') {
+    if (page > Math.ceil(products.length / 6))
+      currentPage = products.length / 6;
+    renderGrid(products, currentPage);
+  } else {
+    if (page > Math.ceil(products.length / 3))
+      currentPage = products.length / 3;
+    renderList(products, currentPage);
+  }
+
+  document.getElementById(`page-${currentPage}`).classList.add('page--active');
+}
+
+function renderPagination() {
+  const pagination = document.getElementById('pagination');
+
+  pagination.innerHTML = `
+    <li id="prev" onclick="${updatePage(currentPage - 1)}">
+      <i class="list-pagination__item fas fa-caret-left px-2"></i>
+    </li>
+  `;
+
+  const numberPerPage = localStorage.getItem('display') === 'grid' ? 6 : 3;
+
+  [...Array(Math.ceil(products.length / numberPerPage))].forEach((_, index) => {
+    pagination.insertAdjacentHTML(
+      'beforeend',
+      `<li id="page-${index + 1}" class="list-pagination__item ${
+        index + 1 === currentPage ? 'page--active' : ''
+      } fw-semibold px-2" onclick="updatePage(${index + 1})">${index + 1}</li>`
+    );
+  });
+
+  pagination.insertAdjacentHTML(
+    'beforeend',
+    `<li id="next" class="list-pagination__item fw-semibold px-2">
+      <i class="fas fa-caret-right"></i>
+    </li>`
+  );
+}
