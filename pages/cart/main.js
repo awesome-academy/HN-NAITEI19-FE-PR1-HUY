@@ -40,6 +40,7 @@ function inputOnChange(value, index) {
 if (cart.length === 0) {
   showIconEmpty();
 } else {
+  document.getElementById('payBtn').removeAttribute('disabled');
   cart.forEach((element, index) => {
     tbody.insertAdjacentHTML(
       'beforeend',
@@ -101,4 +102,9 @@ function deleteItem(itemId) {
   if (cart.length === 0) {
     showIconEmpty();
   }
+}
+
+function navigatePayment() {
+  updateCart();
+  window.location.href = '/pages/payment/invoice.html';
 }
