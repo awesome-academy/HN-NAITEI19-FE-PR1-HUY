@@ -11,3 +11,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: rgb(120, 150, 41);
+}
