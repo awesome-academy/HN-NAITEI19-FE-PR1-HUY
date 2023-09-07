@@ -24,14 +24,14 @@
     {
       "id": 4,
       "title": "Mỹ phẩm châu Âu",
-      "img": "../../asset/image/slide1.png",
+      "img": "../../asset/image/slide3.png",
       "price": 350000,
       "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
     },
     {
       "id": 5,
       "title": "Mỹ phẩm châu Âu",
-      "img": "../../asset/image/slide1.png",
+      "img": "../../asset/image/slide2.png",
       "price": 350000,
       "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
     },
@@ -41,6 +41,99 @@
       "img": "../../asset/image/slide1.png",
       "price": 350000,
       "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 7,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide2.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 8,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide2.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 9,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide3.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 10,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide1.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    },
+    {
+      "id": 11,
+      "title": "Mỹ phẩm châu Âu",
+      "img": "../../asset/image/slide3.png",
+      "price": 350000,
+      "description": "Tự hào được ghi là năm mà Tiffani & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà."
+    }
+  ],
+  "order": [
+    {
+      "customerName": "Tran Nhat Huy",
+      "total": 1050000,
+      "itemsList": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        }
+      ],
+      "createdAt": 1694057335658,
+      "id": 1
+    },
+    {
+      "customerName": "Tran Nhat Huy",
+      "total": 1400000,
+      "itemsList": [
+        {
+          "itemId": 1,
+          "quantity": "3"
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "createdAt": 1694058852608,
+      "id": 2
+    },
+    {
+      "customerName": "Tran Nhat Huy",
+      "total": 1050000,
+      "itemsList": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        }
+      ],
+      "createdAt": 1694059004919,
+      "id": 3
     }
   ]
 }
